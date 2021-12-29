@@ -1,0 +1,150 @@
+/* Variables */
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+/* Reset */
+html {
+  box-sizing: border-box;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0;
+  height: 100vh;
+  background-color: var(--pale-blue);
+  background-image: url("images/pattern-background-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: 100vw 50vh;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+/* summary styles */
+.summary {
+  width: clamp(20rem, 32vw, 24rem);
+  border-radius: 1rem;
+  background-color: white;
+}
+
+.summary > img {
+  max-width: 100%;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.summary-content {
+  height: 55vh;
+  padding: 0 8%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: space-evenly;
+}
+.summary-content > * {
+  width: 100%;
+  text-align: center;
+}
+.summary-content h2 {
+  color: var(--dark-blue);
+  font-weight: 900;
+}
+.summary-content > p {
+  color: var(--desaturated-blue);
+  font-weight: 500;
+}
+.summary-change {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--very-pale-blue);
+  padding: 1rem;
+  gap: 1.25rem;
+  border-radius: 1rem;
+}
+
+.summary-change > div {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.summary-change h4 {
+  color: var(--dark-blue);
+  font-weight: 700;
+}
+.summary-change p {
+  color: var(--desaturated-blue);
+  font-weight: 500;
+}
+
+.summary-change > p {
+  cursor: pointer;
+  color: var(--bright-blue);
+  font-weight: 700;
+  text-decoration: underline;
+}
+.summary-change > p:hover {
+  opacity: 70%;
+  text-decoration: none;
+}
+
+.summary-payment {
+  cursor: pointer;
+  font-weight: 900;
+  color: white;
+  background-color: var(--bright-blue);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.summary-payment:hover {
+  opacity: 70%;
+}
+.summary-cancel {
+  display: inline;
+  width: auto;
+  cursor: pointer;
+  color: var(--desaturated-blue);
+  font-weight: 900;
+}
+
+.summary-cancel:hover {
+  color: var(--dark-blue);
+}
+/* Footer */
+.attribution {
+  align-self: center;
+  width: 100%;
+  color: var(--desaturated-blue);
+  font-size: 1rem;
+  text-align: center;
+}
+
+.attribution p {
+  margin: 0;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
